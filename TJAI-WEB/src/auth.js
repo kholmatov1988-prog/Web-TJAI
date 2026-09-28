@@ -91,7 +91,6 @@ export function renderAuth(container, onEnter, language, onLanguageChange) {
       const register = button(t(currentLanguage, "createAccount"), "button button-primary");
       const login = button(t(currentLanguage, "alreadyAccount"), "button");
       const guest = button(t(currentLanguage, "guest"), "button button-quiet");
-      register.disabled = login.disabled = !hasSupabaseConfig;
       register.addEventListener("click", () => { mode = "register"; stage = "form"; render(); });
       login.addEventListener("click", () => { mode = "login"; stage = "form"; render(); });
       guest.addEventListener("click", enterGuest);
